@@ -1,5 +1,5 @@
 # Stage 1: Build the React app with Vite
-FROM node:18-alpine AS build
+FROM node:18
 
 # Set working directory
 WORKDIR /app
@@ -16,5 +16,4 @@ COPY . .
 EXPOSE 5173
 
 # Start Nginx server
-RUN npm run dev
-# CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev"]
